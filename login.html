@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar — Mozao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .login-wrap{min-height:100svh;display:grid;place-items:center;padding:24px}
+    .login-card{max-width:420px;width:100%}
+    .login-actions{display:flex;gap:10px;margin-top:12px}
+    .hint{color:#b1c0cf;font-size:.9rem;margin-top:8px}
+  </style>
+</head>
+<body>
+<div class="login-wrap">
+  <div class="card login-card">
+    <h1 style="margin-top:0">💙 Bem-vindo</h1>
+    <p>Digite a senha para entrar:</p>
+    <input id="pw" type="password" placeholder="Senha" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0a1016;color:#e8f0f8">
+    <div class="login-actions">
+      <button id="enter" class="btn primary" style="flex:1">Entrar</button>
+      <button id="toggle" class="btn ghost">Mostrar</button>
+    </div>
+    <div id="err" class="hint" style="display:none;color:#ff7aa5">TA ME TIRANDO, MEU???</div>
+  </div>
+</div>
+
+<script src="assets/js/auth.js"></script>
+<script>
+  // Se já estiver logado, manda pra home
+  if (isLoggedIn()) window.location.href = "index.html";
+
+  const PW = "040725";
+  const pw = document.getElementById("pw");
+  const err = document.getElementById("err");
+
+  function unlock(){
+    if (pw.value.trim() === PW){
+      login();
+      window.location.href = "index.html";
+    } else {
+      err.style.display = "block";
+      setTimeout(()=> err.style.display = "none", 2800);
+    }
+  }
+  document.getElementById("enter").addEventListener("click", unlock);
+  document.getElementById("toggle").addEventListener("click", ()=>{
+    pw.type = pw.type === "password" ? "text" : "password";
+  });
+  pw.addEventListener("keydown", e => { if(e.key === "Enter") unlock(); });
+</script>
+</body>
+</html>
