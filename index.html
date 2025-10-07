@@ -3,42 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🍽️ Restaurantes</title>
+  <title>Mozao — Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+<script src="assets/js/auth.js"></script>
+<script>requireAuth("login.html");</script>
+
 <header class="navbar">
   <div class="container">
-    <a class="brand" href="../index.html"><span class="brand-mark">❤</span> Mozao</a>
+    <a class="brand" href="index.html"><span class="brand-mark">❤</span> Mozao</a>
     <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="../aniversario/index.html">Aniversário</a>
-      <a href="../restaurantes/index.html">Restaurantes</a>
-      <a href="../dates/index.html">Dates</a>
-      <a class="cta" href="../index.html#contato">Fale Conosco</a>
+      <a href="aniversario/index.html">Aniversário</a>
+      <a href="restaurantes/index.html">Restaurantes</a>
+      <a href="dates/index.html">Dates</a>
+      <!-- <a class="cta" href="index.html#contato">Fale Conosco</a> -->
     </nav>
   </div>
 </header>
-<main class="section">
-  <div class="container">
-    <h1>🍽️ Restaurantes</h1>
-    <p class="lead">Nossa lista queridinha de lugares para comer bem.</p>
-    <div class="card-list">
-      <div class="card"><h3>Seção A</h3><p>Conteúdo exemplo.</p></div>
-      <div class="card"><h3>Seção B</h3><p>Conteúdo exemplo.</p></div>
-      <div class="card"><h3>Seção C</h3><p>Conteúdo exemplo.</p></div>
+<section class="hero hero-dark">
+  <div class="container hero-inner">
+    <h1>Memórias que valem por mil palavras</h1>
+    <p>Website dedicado para guardar memórias com o meu mozao.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="aniversario/index.html">🎂 Ver Aniversário</a>
+      <a class="btn ghost" href="restaurantes/index.html">🍽️ Restaurantes</a>
+      <a class="btn ghost" href="dates/index.html">💞 Próximos Dates</a>
     </div>
-    <a class="btn ghost" href="../index.html">⬅ Voltar</a>
   </div>
-</main>
+</section>
+
+<section class="features">
+  <div class="container grid-3">
+    <div class="card">
+      <h3>Ontem</h3>
+      <p>As lembranças que moldaram quem somos. Cada foto aqui conta um pedacinho de nós.</p>
+    </div>
+    <div class="card">
+      <h3>Hoje</h3>
+      <p>O presente que vivemos intensamente, registrando cada detalhe que o tempo não deve apagar.</p>
+    </div>
+    <div class="card">
+      <h3>Amanhã</h3>
+      <p>O que ainda vamos viver — porque nossa história está só começando.</p>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="contato" class="contact">
+  <div class="container">
+    <h2>Fale Conosco</h2>
+    <p>Quer sugerir um novo lugar ou ideia de date? Envie uma mensagem!</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada!');">
+      <div class="grid-2">
+        <input required placeholder="Seu nome">
+        <input required type="email" placeholder="Seu e-mail">
+      </div>
+      <textarea rows="5" required placeholder="Sua mensagem"></textarea>
+      <button class="btn primary" type="submit">Enviar</button>
+    </form>
+  </div>
+</section> -->
 <footer class="footer">
   <div class="container">Para o Meu Tudo - Feito com 💙</div>
 </footer>
-<script src="../assets/js/app.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
-</html>
