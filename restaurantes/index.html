@@ -8,8 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script src="../assets/js/auth.js"></script>
+<script>requireAuth("../login.html");</script>
+
 <header class="navbar">
   <div class="container">
     <a class="brand" href="../index.html"><span class="brand-mark">❤</span> Mozao</a>
@@ -20,25 +24,71 @@
       <a href="../aniversario/index.html">Aniversário</a>
       <a href="../restaurantes/index.html">Restaurantes</a>
       <a href="../dates/index.html">Dates</a>
-      <!-- <a class="cta" href="../index.html#contato">Fale Conosco</a> -->
     </nav>
   </div>
 </header>
+
 <main class="section">
   <div class="container">
     <h1>🍽️ Restaurantes</h1>
-    <p class="lead">Nossa lista queridinha de lugares para comer bem.</p>
+    <p class="lead">Nossa lista queridinha de lugares para comer bem e criar novas memórias juntos.</p>
+
     <div class="card-list">
-      <div class="card"><h3>A Figueira Rubaiyat</h3><p>Restaurante para comemorar alguma data especial</p></div>
-      <div class="card"><h3>Holy Burger</h3><p>Um dos melhores hamburgers de SP que temos que provar</p></div>
-      <div class="card"><h3>Restaurante Tijuca</h3><p>Voltar no nosso restaurante queridinho para comer Moqueca (você) e Baião de Dois (eu) </p></div>
+      <!-- A FIGUEIRA -->
+      <div class="card restaurant-card" data-gallery='[
+        "https://spcity.com.br/wp-content/uploads/2017/11/figueira-1300x700.jpg",
+        "https://media1.tenor.com/m/wkWmvScujeQAAAAd/discord-loading-screen.gif"
+      ]'>
+        <div class="gallery">
+          <button class="g-prev" aria-label="Imagem anterior">⟵</button>
+          <div class="viewport"><img alt="A Figueira Rubaiyat"></div>
+          <button class="g-next" aria-label="Próxima imagem">⟶</button>
+          <div class="g-dots"></div>
+        </div>
+        <h3>A Figueira Rubaiyat</h3>
+        <p>Perfeito para comemorar datas especiais sob a figueira centenária.</p>
+      </div>
+	  
+	  <!-- TIJUCA -->
+      <div class="card restaurant-card" data-gallery='[
+        "https://scontent-gru2-1.xx.fbcdn.net/v/t39.30808-6/494420148_1128623052637440_7362419586322663099_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=tlirKDJtcYYQ7kNvwHARu0z&_nc_oc=Adk5-ULQ76mhwhTPrR8sYeSKzTIGlyUKzBsVVES-EFK02_ak354xJrTOpj9GE2IWALBo6YxUEoaLh2jfEZBUn85y&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&_nc_gid=nvna6oy0Vyr-V073-JVSHw&oh=00_AffeL1HzRcAZFLezHNQ9yc1liLrI1yzZhgDvSGNnVrD29g&oe=68FB4386",
+        "../assets/img/restaurantes/tijuca-1.png"
+      ]'>
+        <div class="gallery">
+          <button class="g-prev" aria-label="Imagem anterior">⟵</button>
+          <div class="viewport"><img alt="Restaurante Tijuca"></div>
+          <button class="g-next" aria-label="Próxima imagem">⟶</button>
+          <div class="g-dots"></div>
+        </div>
+        <h3>Restaurante Tijuca</h3>
+        <p>Nosso queridinho: Moqueca pra você, Baião de Dois pra mim — sempre especial.</p>
+      </div>
+
+      <!-- HOLY BURGER -->
+      <div class="card restaurant-card" data-gallery='[
+        "https://s3.us-east-005.backblazeb2.com/glamurama01/2014/12/burguer2.png",
+        "https://media1.tenor.com/m/wkWmvScujeQAAAAd/discord-loading-screen.gif"
+      ]'>
+        <div class="gallery">
+          <button class="g-prev" aria-label="Imagem anterior">⟵</button>
+          <div class="viewport"><img alt="Holy Burger"></div>
+          <button class="g-next" aria-label="Próxima imagem">⟶</button>
+          <div class="g-dots"></div>
+        </div>
+        <h3>Holy Burger</h3>
+        <p>Um dos melhores burgers de SP — atmosfera moderna e sabor marcante.</p>
+      </div>
     </div>
+
     <a class="btn ghost" href="../index.html">⬅ Voltar</a>
   </div>
 </main>
+
 <footer class="footer">
   <div class="container">Para o Meu Tudo - Feito com 💙</div>
 </footer>
+
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/gallery.js"></script>
 </body>
 </html>

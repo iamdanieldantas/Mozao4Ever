@@ -8,8 +8,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    /* Mesmo estilo da página de restaurantes */
+    .date-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .date-card {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .date-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(14, 165, 163, 0.25);
+    }
+  </style>
 </head>
 <body>
+<script src="../assets/js/auth.js"></script>
+<script>requireAuth("../login.html");</script>
+
 <header class="navbar">
   <div class="container">
     <a class="brand" href="../index.html"><span class="brand-mark">❤</span> Mozao</a>
@@ -20,40 +42,63 @@
       <a href="../aniversario/index.html">Aniversário</a>
       <a href="../restaurantes/index.html">Restaurantes</a>
       <a href="../dates/index.html">Dates</a>
-      <!-- <a class="cta" href="../index.html#contato">Fale Conosco</a> -->
     </nav>
   </div>
 </header>
+
 <main class="section">
   <div class="container">
     <h1>💞 Dates</h1>
-    <p class="lead">Ideias e planos para nossos próximos encontros.</p>
+    <p class="lead">Ideias e planos para nossos próximos encontros — porque cada momento juntos merece ser vivido de forma especial.</p>
+
     <div class="card-list">
-      <div class="card"><h3>Cinema</h3><p>Usar os ingressos gratis que ganhamos no Morumbi Town</p>
-		<img src="https://cdn.jornaldaparaiba.com.br/img/inline/180000/900x0/Semana-do-Cinema-tem-inicio-nesta-quinta-6-com-pro0018825900202502060954-8.webp?fallback=https%3A%2F%2Fcdn.jornaldaparaiba.com.br%2Fimg%2Finline%2F180000%2FSemana-do-Cinema-tem-inicio-nesta-quinta-6-com-pro0018825900202502060954.jpg%3Fxid%3D1161511&xid=1161511" style="vertical-align:middle;" width="300" height="200">
-	  </div>
-      <div class="card"><h3>Piscina & Espumante</h3><p>Pegar um dia de calor, a noite, pra ficar com o mozão na piscina tomando um espumante </p>
-		<img src="https://forbes.com.br/wp-content/uploads/2019/08/ForbesLife_unique-capa_090819_Hotel-Unique-copy-768x512.jpg" style="vertical-align:middle;" width="300" height="200">
-	  </div>
-      <div class="card"><h3>Campos do Jordão</h3><p>Pegar uma data fria pra visitar Campos, tomar um vinho, comer fondue e banho de banheira são atividades obrigatórias nesse dia</p>
-		<img src="https://institucional.seazone.com.br/wp-content/uploads/2024/01/campos-do-jordao-1024x577.jpg.webp" style="vertical-align:middle;" width="300" height="200">
-	  </div>
-	  <div class="card"><h3>Parque Ibirapuera</h3><p>Um pique-nique e andar de bicicleta no parque seria um date e tanto</p>
-		<img src="https://www.baressp.com.br/bares/fotos2/parque-do-ibirapuera-baressp-2-min.jpg" style="vertical-align:middle;" width="300" height="200">
-	  </div>
-	  <div class="card"><h3>Viagem Internacional</h3><p>Criar memórias em uma viagem para outro páis, fazendo passeios e ganhando histórias pra contar</p>
-		<img src="https://emtempo.com.br/wp-content/uploads/2024/08/passaporte.jpg" style="vertical-align:middle;" width="300" height="200">
-	  </div>
-	  <div class="card"><h3>Cruzeiro</h3><p>Pegar um all inclusive e aproveitar de tudo que temos direito, comer muito e nos divertirmos juntinhos</p>
-		<img src="https://litoral-verde.s3.sa-east-1.amazonaws.com/wp-content/uploads/2023/07/18164823/CostaToscana_casco-1024x546.jpg" style="vertical-align:middle;" width="300" height="200">
-	  </div>
+
+      <div class="card date-card">
+        <img src="https://cdn.jornaldaparaiba.com.br/img/inline/180000/900x0/Semana-do-Cinema-tem-inicio-nesta-quinta-6-com-pro0018825900202502060954-8.webp?fallback=https%3A%2F%2Fcdn.jornaldaparaiba.com.br%2Fimg%2Finline%2F180000%2FSemana-do-Cinema-tem-inicio-nesta-quinta-6-com-pro0018825900202502060954.jpg%3Fxid%3D1161511&xid=1161511" alt="Cinema">
+        <h3>Cinema</h3>
+        <p>Usar os ingressos grátis que ganhamos no Morumbi Town e curtir um filminho juntinhos.</p>
+      </div>
+
+      <div class="card date-card">
+        <img src="https://forbes.com.br/wp-content/uploads/2019/08/ForbesLife_unique-capa_090819_Hotel-Unique-copy-768x512.jpg" alt="Piscina e Espumante">
+        <h3>Piscina & Espumante</h3>
+        <p>Aproveitar uma noite quente na piscina, brindando o amor com um espumante geladinho.</p>
+      </div>
+
+      <div class="card date-card">
+        <img src="https://institucional.seazone.com.br/wp-content/uploads/2024/01/campos-do-jordao-1024x577.jpg.webp" alt="Campos do Jordão">
+        <h3>Campos do Jordão</h3>
+        <p>Um refúgio de frio, vinho, fondue e banheira — o cenário perfeito pra um date inesquecível.</p>
+      </div>
+
+      <div class="card date-card">
+        <img src="https://www.baressp.com.br/bares/fotos2/parque-do-ibirapuera-baressp-2-min.jpg" alt="Parque Ibirapuera">
+        <h3>Parque Ibirapuera</h3>
+        <p>Um piquenique, bicicleta, música leve e risadas — um dia simples e perfeito ao seu lado.</p>
+      </div>
+
+      <div class="card date-card">
+        <img src="https://emtempo.com.br/wp-content/uploads/2024/08/passaporte.jpg" alt="Viagem Internacional">
+        <h3>Viagem Internacional</h3>
+        <p>Explorar o mundo juntos, colecionar memórias e viver novas histórias em cada destino.</p>
+      </div>
+
+      <div class="card date-card">
+        <img src="https://litoral-verde.s3.sa-east-1.amazonaws.com/wp-content/uploads/2023/07/18164823/CostaToscana_casco-1024x546.jpg" alt="Cruzeiro">
+        <h3>Cruzeiro</h3>
+        <p>Um all inclusive dos sonhos: comer, relaxar e se divertir lado a lado em alto mar.</p>
+      </div>
+
     </div>
+
     <a class="btn ghost" href="../index.html">⬅ Voltar</a>
   </div>
 </main>
+
 <footer class="footer">
   <div class="container">Para o Meu Tudo - Feito com 💙</div>
 </footer>
+
 <script src="../assets/js/app.js"></script>
 </body>
 </html>
