@@ -1,0 +1,115 @@
+/* ===== Restaurantes - Carrossel ===== */
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #0a1016;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .viewport {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1; /* imagem fica abaixo das setas */
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 14px;
+}
+
+.gallery:hover img {
+  transform: scale(1.05);
+}
+
+/* --- Botões de navegação --- */
+.gallery .g-prev,
+.gallery .g-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(14,165,163,.15);
+  color: var(--text);
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  transition: background .2s ease, transform .2s ease;
+  z-index: 2; /* garante que fiquem acima da imagem */
+}
+
+.gallery .g-prev:hover,
+.gallery .g-next:hover {
+  background: rgba(14,165,163,.28);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Posições */
+.gallery .g-prev { left: 10px; }
+.gallery .g-next { right: 10px; }
+
+/* --- Dots (bolinhas) --- */
+.g-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 8px;
+  z-index: 3;
+}
+
+.g-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,.25);
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.g-dots button:hover {
+  transform: scale(1.2);
+  background: rgba(14,165,163,.55);
+}
+
+.g-dots button.active {
+  background: linear-gradient(135deg, var(--blue), var(--primary));
+}
+
+/* --- Card container --- */
+.restaurant-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(14,165,163,0.25);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+  .gallery {
+    height: 240px;
+  }
+}
