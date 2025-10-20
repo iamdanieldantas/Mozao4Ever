@@ -1,6 +1,6 @@
 (function(){
   const slides = [
-    { title: "O Aniversário é seu mas o presente é meu 🎁", text: "Separei algumas recordações nossas. Ta pronto?", img: "../assets/img/bday/Image.png" },
+    { title: "O aniversário é seu mas o presente é meu 🎁", text: "Separei algumas recordações nossas. Ta pronto?", img: "../assets/img/bday/Image.png" },
     { title: "Primeira vez que você me levou em casa", text: "Nesse dia passamos a noite juntos e você tinha que ir trabalhar, mas foi me deixar em casa antes e eu já morrendo de saudade do meu dengo.", img: "../assets/img/bday/Image (1).png" },
     { title: "Quando fomos ao cinema", text: "No dia anterior tínhamos terminado (por 1h) mas percebemos que não conseguimos ficar separados. Amo essa foto porque ela mostra o quanto nos amamos.", img: "../assets/img/bday/Image (2).png" },
     { title: "Cozinhando juntos", text: "Nesse dia 'nós' fizemos macarrão, que por sinal estava uma delícia. Essa foto poética retrata a profundidade e a beleza do nosso amor.", img: "../assets/img/bday/Image (3).png" },

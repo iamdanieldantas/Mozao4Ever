@@ -176,3 +176,50 @@ img{
 }
 .dots button:hover{transform:scale(1.15);background:rgba(14,165,163,.55)}
 .dots button.active{background:linear-gradient(135deg,var(--blue),var(--primary))}
+
+/* ===== Ajustes de layout — Aniversário (desktop) ===== */
+@media (min-width: 1024px) {
+  /* container um pouco mais largo nessa página */
+  .section .container { max-width: 1200px; }
+
+  /* cabeçalho do card alinhado e compacto */
+  .carousel-header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* título à esquerda, pager à direita */
+    align-items: center;
+    gap: 16px;
+  }
+  .carousel-header h2 { margin: 0; }
+
+  /* 60/40 com centralização vertical e mais respiro */
+  .carousel-body {
+    grid-template-columns: 0.9fr 1.1fr; /* texto / foto */
+    gap: 28px;
+    align-items: center;                /* centraliza verticalmente */
+  }
+
+  /* texto com largura confortável (evita área vazia) */
+  #slideText {
+    max-width: 560px;                   /* ~65–75 caracteres/linha */
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  /* foto levemente maior e bem posicionada */
+  .carousel .photo {
+    justify-self: end;                  /* encosta a foto à direita */
+  }
+  .carousel .photo img,
+  .carousel .ph {
+    width: 100%;
+    max-height: min(60vh, 560px);       /* limita altura pra não “pesar” */
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  /* mais respiro no card do carrossel */
+  .carousel {
+    padding: 24px 28px 20px;
+  }
+}
